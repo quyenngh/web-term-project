@@ -1,0 +1,66 @@
+{% extends "base.html" %} {% block title %}Menu{% endblock %} {% block content
+%}
+<main>
+  <div class="menucustomPage">
+    <section class="menucustomNavBar">
+      <h1 class="menuTitile">Menu</h1>
+      {% for category in categories %}
+      <h3><a href="#{{ category }}">| {{ category|capitalize }}</a></h3>
+      {% endfor %}
+    </section>
+
+    <section class="menuItem">
+      <p>Enjoy your time!</p>
+      {% for category in categories %}
+      <h2 id="{{ category }}">{{ category|capitalize }}</h2>
+      <ul class="itemType">
+        {% for product in products[category] %}
+        <li>
+          <img
+            src="{{ url_for('static', filename='image/menuPage/' + product.name + '.png') }}"
+            alt="{{ product.name }} images"
+            width="200"
+            height="230"
+            onerror="this.onerror=null;this.src='{{ url_for('static', filename='image/menuPage/placeholder.png') }}';"
+          />
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.description }}</p>
+          <p>Price: {{ product.price }}</p>
+          <div class="quantity">
+            <button
+              class="removeButton"
+              type="button"
+              onclick="subtractOne(this)"
+            >
+              -
+            </button>
+            <input class="count" type="number" value="0" readonly />
+            <button class="addButton" type="button" onclick="addOne(this)">
+              +
+            </button>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+      <div class="orderForm">
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Enter your name" {% if
+        session.get('username') %}value="{{ session['username'] }}" readonly{%
+        endif %} />
+        <label for="address">Address/Note:</label>
+        <input id="address" type="text" placeholder="type here..." />
+      </div>
+      <button class="orderButton" type="button" onclick="submitOrder()">
+        <input
+          id="authStatus"
+          type="hidden"
+          value="{% if current_user.is_authenticated %}true{% else %}false{% endif %}"
+        />
+        Order
+      </button>
+    </section>
+  </div>
+</main>
+
+{% endblock %}

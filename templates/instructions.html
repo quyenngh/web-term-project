@@ -1,0 +1,80 @@
+{% extends "base.html" %} {% block title %}Instructions{% endblock %} {% block
+content %}
+
+<main class="instructionPage">
+  <h1>How to make your own bubble tea?</h1>
+
+  <div>
+    <section>
+      <div>
+        <h2>1</h2>
+        <img
+          class="backpic1"
+          src="{{ url_for('static', filename='image/instructionPage/teaBase.png') }}"
+          alt="tea base images"
+        />
+        <h3>Choose a tea base.</h3>
+        <p>
+          Consider the flavor and caffeine level of each tea before making your
+          selection.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h2>2</h2>
+        <img
+          class="backpic1"
+          src="{{ url_for('static', filename='image/instructionPage/milkOption.png') }}"
+          alt="milk images"
+        />
+        <h3>Choose a dairy option.</h3>
+        <p>You can add a dairy option you want to your drink.</p>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h2>3</h2>
+        <img
+          class="backpic1"
+          src="{{ url_for('static', filename='image/instructionPage/toppingOption.png') }}"
+          alt="toppings images"
+        />
+        <h3>Choose your toppings.</h3>
+        <p>Go and check out our various options!</p>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h2>4</h2>
+        <img
+          class="backpic1"
+          src="{{ url_for('static', filename='image/instructionPage/sugarOption.png') }}"
+          alt="sugar images"
+        />
+        <h3>Choose a sweetener and sugar level.</h3>
+        <p>There are several options for you to select from.</p>
+      </div>
+    </section>
+
+    <section>
+      <div>
+        <h2>5</h2>
+        <img
+          class="backpic1"
+          src="{{ url_for('static', filename='image/instructionPage/iceOption.png') }}"
+          alt="ice images"
+        />
+        <h3>Choose a ice level.</h3>
+        <p>
+          There are three options for ice level for you to decide to your
+          preference.
+        </p>
+      </div>
+    </section>
+  </div>
+</main>
+{% endblock %}

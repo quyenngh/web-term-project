@@ -1,0 +1,43 @@
+{% extends "base.html" %} 
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<main class="loginPage">
+
+
+
+  <section class="loginSection">
+      <h1>Welcome back ! </h1>
+      {% if error %}
+      <p> >>> {{ error }} !</p>
+      {% endif %}
+      <form action="/login" method="post" class="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="username"/><br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="password"/><br /><br />
+        <input class="loginsubmitButton" type="submit" value="Login" />
+      </form>
+  </section >
+
+  <section class="welsomeSection">
+    <p>. . . . . .</p>
+    <p>. . . . . .</p>
+    <p>. . . . . .</p>
+    <div>
+      <img
+            src="{{ url_for('static', filename='image/loginsignupPage/drinkSeries.png') }}"
+            alt="some drinks image"
+            width="240"
+            height="210"
+          />
+      <h2>Check it out !</h3>  
+    </div>
+    <p>. . . . . .</p>
+    <p>. . . . . .</p>
+    <p>. . . . . .</p>
+
+  </section>
+</main>
+{% endblock %}

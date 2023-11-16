@@ -1,0 +1,946 @@
+body {
+  background-color: #f5ebe0;
+  font-family: "Josefin Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  color: #58624b;
+  padding-right: 1vw;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+
+.topMainNavBar {
+  display: grid;
+  grid-template-columns: 4fr 1fr 3fr 1fr;
+  background: #58624b;
+  width: 100%;
+  align-items: center;
+}
+
+.ourName {
+  font-family: "Pacifico", cursive;
+  color: #58624b;
+  font-size: 3vw;
+}
+
+main {
+  margin-top: 20vh;
+}
+
+.navList,
+.accountButton,
+ourName {
+  text-align: center;
+  overflow: hidden;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  margin-top: auto;
+}
+
+.colorContainer {
+  display: flex;
+  color: white;
+}
+
+.navColor {
+  background-color: #58624b;
+  width: 4vw;
+  height: 3vh;
+  border-radius: 0px 0px 50px 50px;
+}
+
+.navList a {
+  border-radius: 0.6em;
+  padding: 10px 10px;
+  margin: 5px 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navList a:hover,
+.navList a:focus {
+  box-shadow: 0px 0px 10px #b69394;
+  background-color: #b69394;
+  color: white;
+}
+
+.logoButton {
+  display: flex;
+  justify-self: center;
+}
+
+.logoButton > a {
+  margin-top: 10px;
+  color: white;
+}
+
+.acctCartButton {
+  display: flex;
+  justify-self: right;
+}
+
+.accountButton1,
+.accountButton2,
+.logoutButton {
+  width: 4vw;
+  height: 2.5vh;
+  background-color: #c1bc92;
+  padding-top: 1.8vh;
+  border-radius: 50px 0px 0px 50px;
+  justify-self: right;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.accountButton2 {
+  text-align: left !important;
+  width: 5vw !important;
+  padding-left: 0.5vw;
+}
+
+.accountButton1:hover {
+  box-shadow: 0px 0px 10px #808e68;
+  background-color: #808e68;
+  font-size: 1em;
+}
+.accountButton2 {
+  background-color: #b69394;
+  border-radius: 0px;
+}
+
+.accountButton2:hover {
+  box-shadow: 0px 0px 10px #946c6e;
+  background-color: #946c6e;
+  font-size: 1em;
+}
+
+.cartIcon {
+  grid-column: 3/4;
+  justify-self: right;
+  padding-right: 0.5vw;
+}
+
+header a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: left;
+  font-size: 50px;
+  margin-top: 0px;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+footer h3{
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+footer p{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  text-align: left !important;
+}
+footer div {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+
+footer a{
+  text-decoration: none;
+}
+
+
+
+
+/* home page */
+
+.homeContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.homeContent > section:first-child {
+  padding-left: 130px;
+  padding-right: 20px;
+}
+.homeSlogan {
+  font-size: 40px;
+  padding-top: 150px;
+  color: #c1a390;
+}
+
+.contentWord {
+  color: #a1988f;
+  font-size: 25px;
+}
+
+.contentWord3 {
+  text-align: right;
+}
+.backpic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 0px 0px 0px;
+}
+.backpic img {
+  border: 10px solid #d5bdaf;
+}
+.backpic1,
+.backpic3 {
+  justify-self: right;
+}
+
+.backpic2,
+.backpic4 {
+  justify-self: left;
+}
+
+/* menu page */
+/* customize1 page */
+
+.menucustomPage {
+  display: grid;
+  grid-template-columns: 2fr 6fr;
+  grid-template-rows: 50px 1fr;
+}
+
+.menucustomNavBar {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  position: fixed;
+  margin-left: 3vw;
+  margin-top: 5vh;
+}
+
+.menucustomNavBar h3 a {
+  text-decoration: none;
+  color: #58624b;
+}
+
+.menucustomItem,
+.menuItem {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.menucustomItem > p,
+.menuItem > p {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  color: #c1a390;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.reminder {
+  font-size: 25px !important;
+  padding-top: 2vh;
+}
+.menucustomItem h2,
+.menuItem h2 {
+  padding-top: 20vh;
+  margin: 0px;
+  text-align: center;
+  padding-bottom: 3vh;
+  font-size: 2em;
+}
+
+.itemType {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  padding: 0px;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.itemType li {
+  flex: 1 0 calc(20% - 10px);
+  margin-bottom: 5vh;
+  
+}
+
+.itemType img {
+  border-radius: 10%;
+  border: 10px solid #c1bc92;
+}
+
+.ingredientInfo {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.removeButton,
+.addButton {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #58624b;
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.count {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 4px solid #58624b;
+  border-radius: 30%;
+  margin: 0 5px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.addingredientButton {
+  display: inline-block;
+  width: 1vw;
+  height: 1vw;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.addingredientButton.selected {
+  background-color: #58624b !important;
+}
+
+.addMenuButton {
+  align-items: center;
+  background-color: #808e68 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+  width: 16vw;
+  height: 7vh;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 20px;
+  justify-self: right;
+  margin: 6vh 3vw 0px 0px;
+  border: 5px solid #58624b;
+}
+
+.addMenuButton:hover {
+  background-color: #58624b !important;
+  border-bottom: 3px solid #58624b !important;
+  box-shadow: 0px 0px 10px #58624b;
+}
+
+/* menu page new new new, I will clean and combine with other class later after both this and my branch merge */
+
+.orderButton {
+  align-items: center;
+  background-color: #808e68 !important;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  width: 14vw;
+  height: 6vh;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 20px;
+  justify-self: right;
+  border: 5px solid #58624b;
+  margin-right: 1vw;
+}
+
+.orderButton:hover {
+  background-color: #58624b !important;
+  border-bottom: 3px solid #58624b !important;
+  box-shadow: 0px 0px 10px #58624b;
+}
+
+.menuItem .orderForm {
+  justify-self: right;
+  margin: 3vh 0px 2vh 0px;
+  border-top: 3px dashed #58624b;
+  padding-top: 5vh;
+}
+
+.menuItem .orderForm label {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.menuItem .orderForm input {
+  border: 3px solid #d5bdaf;
+  border-radius: 10px;
+  width: 10vw;
+  height: 3vh;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0px 1vw 0px 1vw;
+  justify-self: center;
+  font-size: 1em;
+}
+
+/* cart  page */
+
+.cartPageLU {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cartTitle,
+.checkoutPage h1 {
+  padding-left: 20px;
+}
+
+.orderdetail {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderdetail > section {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.processWord,
+.dashboardPage > h2 {
+  font-size: 35px;
+  font-style: italic;
+  color: #c1a390;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 9vh;
+}
+.processNote {
+  text-align: center;
+  margin: 1vh 0px 9vh;
+  font-style: italic;
+}
+
+.cartTable {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.cartTable th,
+.cartTable td {
+  height: 6vh;
+  width: 10vw;
+  border-top: 2px solid #808e68;
+  border-bottom: 2px solid #e3d6c1;
+}
+
+.cartTable th:first-child,
+.cartTable td:first-child {
+  width: 15vw;
+}
+
+.quantityInput {
+  width: 5vw;
+  height: 3vh;
+  text-align: center;
+  border: 2px solid #a5b29c;
+  border-radius: 10%;
+  margin: 0 5px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.sumArea {
+  background-color: #e3d6c1;
+  width: 25%;
+  height: 50%;
+  padding: 0px 0px 40px;
+}
+
+.sumArea h3 {
+  font-size: 20px;
+  margin: 0px 0px 0px 10px;
+  text-align: left;
+  color: #58624b;
+}
+
+.sumArea img {
+  background-color: #f5ebe0;
+  padding-left: 70%;
+  padding-right: 30%;
+}
+
+.sumPrice {
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: right;
+  color: #58624b;
+}
+
+
+
+.checkoutCancelLink, .backMenuLink {
+  background-color: #58624b;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  margin: 0px 40px 10px;
+  padding: 1.2vh 5vw;
+  text-decoration: none;
+  border: 0px;
+  font-size: 1.1em;
+}
+
+.backMenuLink {
+  background-color: #f5f0e8;
+  color: #22223b;
+}
+
+.quantityUpdateB,
+.deleteButton {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 2vh 0px 0px 0px;
+  padding: 1vh !important;
+  background-color: #e3d6c1;
+  color: #22223b;
+  border: 0px;
+}
+
+.checkoutCancelLink:hover{
+    background-color: #6a7955;
+    color: white;
+    box-shadow: 0px 0px 10px #6a7955;
+}
+
+.backMenuLink:hover {
+  background-color: #e4e2e0;
+  box-shadow: 0px 0px 10px #75614d7e;
+}
+
+.quantityUpdateB:hover,
+.deleteButton:hover {
+  background-color: #58624b;
+  box-shadow: 0px 0px 10px #58624b;
+  color: white;
+}
+
+.cartButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartPage aside {
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 10vh;
+  font-style: italic;
+}
+
+.cartForm {
+  display: flex;
+}
+
+.deleteFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.deleteFlex p {
+  height: 6vh;
+  border-top: 2px;
+  border-bottom: 2px;
+  margin: 0px;
+  padding: 1px;
+}
+
+.deleteButton{
+    height: 6vh;
+    border-top: 2px;
+    border-bottom: 2px;
+    margin: 2px;
+    border-radius: 40%;
+} 
+
+
+
+
+
+
+/* dashboard */
+
+.dashboardPage h1 {
+  padding-left: 5vw;
+}
+
+.dashboardPage > h2 {
+  margin-bottom: 5vh;
+  font-size: 2em;
+}
+
+.dashboardPage .sumPrice {
+  font-size: 1.3em;
+}
+
+/* signup page & login page */
+
+/* for sign up page */
+
+.signupPage,
+.loginPage {
+  display: flex;
+  justify-content: center;
+  margin-top: 24vh;
+}
+
+.imageSection,
+.welsomeSection {
+  border-radius: 20px 0px 0px 20px;
+  background-color: #58624b;
+  width: 30vw;
+  height: 70vh;
+  color: white;
+  border: 5px solid #58624b;
+}
+
+.signupSection,
+.loginSection {
+  width: 30vw;
+  height: 70vh;
+  border-radius: 0px 20px 20px 0px;
+  border: 5px solid #58624b;
+}
+
+.imageSection p,
+.welsomeSection p {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.imageSection div,
+.welsomeSection div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+}
+
+.imageSection img,
+.welsomeSection img {
+  border-radius: 50px;
+  margin-top: 2vh;
+  width: 20vw;
+  height: 30vh;
+}
+
+.imageSection h2,
+.welsomeSection h2 {
+  margin-bottom: 0px;
+  font-size: 1em;
+}
+
+.signupSection h1,
+.loginSection h1,
+.feedbackPage h1 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 15px;
+  font-style: italic;
+  color: #c1a390;
+}
+
+.signupForm {
+  margin-left: 25px;
+}
+
+.signupForm label,
+.loginSection label {
+  visibility: hidden;
+  display: inline-block;
+  text-align: right;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.signupForm input,
+.loginForm input {
+  display: inline-block;
+  width: 22vw;
+  height: 5vh;
+  box-sizing: border-box;
+  margin: 10px;
+  border: 0px;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  border-bottom: 3px solid #808e68;
+  background-color: #f5ebe0;
+}
+
+.signupForm input::placeholder,
+.loginForm input::placeholder {
+  color: #808e68;
+}
+
+.signupForm input:focus,
+.signupForm input:valid,
+.loginForm input:focus,
+.loginForm input:valid {
+  outline: none;
+  border: 0px;
+  border-bottom: 3px solid #808e68;
+}
+
+.signupForm input:focus::placeholder,
+.loginForm input:focus::placeholder {
+  transform: translate(0px, -5px);
+  font-size: 12px;
+  color: #808e68;
+}
+
+.signupsubmitButton,
+.loginsubmitButton {
+  align-items: center;
+  background-color: #808e68 !important;
+  color: white;
+  font-weight: bold;
+}
+
+.signupsubmitButton:hover,
+.loginsubmitButton:hover {
+  background-color: #58624b !important;
+  border-bottom: 3px solid #58624b !important;
+  box-shadow: 0px 0px 10px #58624b;
+}
+
+/* for login page */
+
+.loginSection {
+  border-radius: 20px 0px 0px 20px;
+}
+
+.welsomeSection {
+  border-radius: 0px 20px 20px 0px;
+}
+
+.loginForm {
+  margin-left: 1vw;
+}
+.loginsubmitButton {
+  margin-top: 3vh !important;
+}
+
+.welsomeSection p {
+  text-align: right;
+}
+
+/* instructions page */
+
+.instructionPage > div {
+  display: grid;
+  grid-template-columns: repeat(5, 18vw);
+  justify-content: center;
+  gap: 2vw;
+}
+
+.instructionPage h1 {
+  text-align: center;
+  font-size: 40px;
+  font-style: italic;
+  color: #c1a390;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.instructionPage section div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 75vh;
+  border: 7px double #dad7cd;
+  background-color: #859174;
+  color: #f5ebe0;
+}
+
+.instructionPage section h2 {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  margin-top: 5vh;
+}
+
+.instructionPage section h3 {
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+  margin-top: 2.5vw;
+}
+
+.instructionPage section p {
+  font-size: 18px;
+  margin: 1vw;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.instructionPage section img {
+  margin-left: 1.3vw;
+  width: 15vw;
+  height: 28vh;
+}
+
+/* feedback page */
+
+#feedback-form {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 4fr 1fr;
+}
+/* h1 style put with signuppage/loginage h1 */
+
+.feedbackPage h1 {
+  margin-bottom: 5vh;
+}
+
+.feedbackPage textarea {
+  border: 3px solid #d5bdaf;
+  border-radius: 10px;
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.feedbackPage div {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: self-end;
+}
+
+.saveb,
+.cancelb {
+  background-color: #58624b;
+  color: #faf4ec;
+  border-radius: 0.6em;
+  border: none;
+  padding: 6px 6px;
+  margin: 5px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cancelb {
+  background-color: #9a6768;
+}
+
+.saveb:hover,
+.saveb:active {
+  box-shadow: 0px 0px 10px #c1bc92;
+  background-color: #c1bc92;
+  color: white;
+}
+
+.cancelb:hover,
+.cancelb:active {
+  box-shadow: 0px 0px 10px #b69394;
+  background-color: #b69394;
+  color: white;
+}
+
+/* about page */
+
+.aboutPage section,
+.teamTitle {
+  margin-left: 20px;
+}
+
+.aboutPage p {
+  font-size: 18px;
+  width: 65%;
+  margin-left: 2vw;
+  line-height: 1.5em;
+  /* color: #91705a; */
+}
+
+.ourteamContent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.teamTitle {
+  margin-top: 10vh;
+}
+
+.ourteamContent h2 {
+  background-color: #c1a390;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 5px 0px;
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+.lastPosition {
+  border-radius: 0px 50px 50px 0px;
+}
+
+.ourteamContent h3 {
+  font-style: italic;
+}
+
+.ourteamContent p {
+  text-align: justify;
+  font-size: 85%;
+  margin: 0;
+}
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #859174;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5ebe0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a5b29c;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: #ddd;
+}

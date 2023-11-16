@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<main class="dashboardPage">
+  <h1>Hello {{ user.username }}!</h1>
+  <h2>Your order history</h2>
+  <div class="cartPageLU">
+    <div class="orderdetail">
+      {% for order in orders %}
+      <section>
+        <h2>Order {{ loop.index }}</h2>
+        <!-- <h2>(for test)DB Order {{ order.id }}</h2> -->
+        <p>Name: {{ order.name }}</p>
+        <p>Address/Note: {{ order.address }}</p>
+        <form action="/update_quantity" method="POST">
+          <input type="hidden" name="order_id" value="{{ order.id }}" />
+          <table class="cartTable">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for product_order in order.products %}
+              <tr>
+                <td>{{ product_order.product.name }}</td>
+                <td>{{ product_order.quantity }}</td>
+                <td>{{ product_order.product.price }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </form>
+        <p class="sumPrice">
+          Total price : $ {{ "{:.2f}".format(order.total_price) }}
+        </p>
+      </section>
+
+      {% endfor %}
+    </div>
+  </div>
+</main>
+{% endblock %}

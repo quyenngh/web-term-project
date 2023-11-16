@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Feedback{% endblock %} {% block
+content %}
+<main class="feedbackPage">
+  <h1>Any thoughts? Help us to improve.</h1>
+  <form id="feedback-form" onsubmit="return submitFeedback(event)">
+    <textarea
+      id="feedback-textarea"
+      name="note"
+      rows="20"
+      cols="100"
+      placeholder="Type your thought here..."
+    ></textarea>
+    <div>
+      <button class="saveb" type="submit">Submit</button>
+      <button class="cancelb" type="button" onclick="clearTextArea()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</main>
+
+{% endblock %}

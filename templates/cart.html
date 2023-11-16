@@ -1,0 +1,109 @@
+{% extends "base.html" %} {% block title %}Cart{% endblock %} {% block content
+%}
+<main class="cartPage">
+  {% if current_user.is_authenticated %}
+
+  <h1 class="cartTitle">Cart</h1>
+  <p class="processWord">You are almost done!</p>
+
+  <div class="cartPageLU">
+    <div class="orderdetail">
+      {% for order in orders %}
+      <section>
+        <h2>Order Detail</h2>
+        <p>Name: {{ order.name }}</p>
+        <p>Address/Note: {{ order.address }}</p>
+
+        <div class="cartForm">
+          <form action="/update_quantity" method="POST">
+            <input type="hidden" name="order_id" value="{{ order.id }}" />
+            <table class="cartTable">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for product_order in order.products %}
+                <tr>
+                  <td>{{ product_order.product.name }}</td>
+                  <td>
+                    <input
+                      class="quantityInput"
+                      type="number"
+                      name="quantity[]"
+                      value="{{ product_order.quantity }}"
+                      min="1"
+                      oninput="validity.valid||(value='');"
+                    />
+                    <input
+                      type="hidden"
+                      name="product_order_id[]"
+                      value="{{ product_order.id }}"
+                    />
+                  </td>
+                  <td>{{ product_order.product.price }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <button class="quantityUpdateB" type="submit">
+              Update Quantity
+            </button>
+          </form>
+
+          <div class="deleteFlex">
+            <p></p>
+            {% for product_order in order.products %}
+
+            <form action="/delete_item" method="POST">
+              <input type="hidden" name="order_id" value="{{ order.id }}" />
+              <input
+                type="hidden"
+                name="product_id"
+                value="{{ product_order.product_id }}"
+              />
+              <button class="deleteButton" type="submit">Delete</button>
+            </form>
+
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+
+    <section class="sumArea">
+      <img
+        src="{{ url_for('static', filename='image/cartPage/cuteBubbleTeaCart.png') }}"
+        alt="4 bubble tea images"
+        width="85"
+        height="45"
+      />
+      <h3>Total price:</h3>
+      <p class="sumPrice">$ {{ "{:.2f}".format(total) }}</p>
+      <div class="cartButton">
+        {% for order in orders %}
+        <form action="/cart" method="POST">
+          <input type="hidden" name="order_id" value="{{ order.id }}" />
+          <button class="checkoutCancelLink" type="submit">To Checkout</button>
+        </form>
+        <form action="/cancel" method="POST">
+          <input type="hidden" name="order_id" value="{{ order.id }}" />
+          <button class="checkoutCancelLink" type="submit">Cancel Order</button>
+        </form>
+        {% endfor %}
+        <a class="backMenuLink" href="menu">Back to menu</a>
+
+      </div>
+    </section>
+  </div>
+
+  {% else %}
+  <aside>Please log in/ sign up first.</aside>
+  {% endif %}
+</main>
+
+{% endblock %}

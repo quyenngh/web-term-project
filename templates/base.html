@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Reatea{% endblock %}</title>
+    <link
+      href="{{ url_for('static', filename='css/stylesheet.css') }}"
+      rel="stylesheet"
+    />
+    <script src="{{ url_for('static', filename='scripts/script.js') }}" defer></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="topMainNavBar">
+          <div class="navList">
+            <a href="about" title="about"> ABOUT US </a>
+            <a href="instructions"> INSTRUCTIONS </a>
+            <a href="feedback"> FEEDBACK </a>
+          </div>
+
+          <div class="logoButton">
+            <a href="home" title="home">
+              <img
+                class="logo"
+                src="{{ url_for('static', filename='image/homePage/logo.png') }}"
+                alt="logo"
+                width="50"
+                height="50"
+            /></a>
+            <a class="ourName" href="home" title="home">  ReaTea </a>
+          </div>
+
+          <div class="navList">
+            <a href="menu"> MENU </a></li>
+            <a href="customize"> CUSTOMIZE </a>
+            
+          </div>
+
+          <div class="acctCartButton">
+          
+          <a  class="cartIcon" href="cart">
+            <img
+              src="{{ url_for('static', filename='image/cartPage/cartImage.png') }}"
+              alt="cart image"
+              width="38"
+              height="38"
+          /></a>
+
+          {% if current_user.is_authenticated %}
+          <a class="accountButton1" href="dashboard">{{ current_user.username }}</a>
+          <a class="accountButton2" href="logout">Log Out</a>
+          {% else %}
+          <a class="accountButton1" href="dashboard">Log In</a>
+          <a class="accountButton2" href="signup">Sign Up</a>
+          {% endif %}
+
+        </div>
+    </div>
+    
+      </header>
+
+    {% block content %} {% endblock %}
+    <footer>
+      <h3>Follow Us</h3>
+      
+      <p>© Copyright</p>
+      <div>
+        <a href="https://www.facebook.com" target="_blank">
+          <img
+            src="{{ url_for('static', filename='image/followUP/fbLogo.png') }}"
+            alt="fbLogo"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <img
+            src="{{ url_for('static', filename='image/followUP/instagramLogo.png') }}"
+            alt="instagramLogo"
+            width="40"
+            height="40"
+          />
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+          <img
+            src="{{ url_for('static', filename='image/followUP/twitterLogo.png') }}"
+            alt="twitterLogo"
+            width="40"
+            height="40"
+          />
+        </a>
+      </div>
+    
+    </footer>
+  </body>
+</html>
