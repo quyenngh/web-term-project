@@ -5,13 +5,24 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0px;
-  color: #58624b;
 }
 
 header {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: black;
 }
 
 .topMainNavBar {
@@ -90,35 +101,32 @@ header {
 .acctCartButton {
   display: flex;
   justify-self: right;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.acctCartButton a {
+  border-radius: 0.6em;
+  padding: 10px 10px;
+  margin: 5px 10px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
 }
 
 .accountButton1,
 .accountButton2,
 .logoutButton {
-  width: 4vw;
-  height: 2.5vh;
   background-color: #B0A189;
-  padding-top: 1.8vh;
-  border-radius: 50px 0px 0px 50px;
-  justify-self: right;
-  color: white;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 0.8em;
-  text-align: center;
-}
-
-.accountButton2 {
-  text-align: left !important;
-  width: 5vw !important;
-  padding-left: 0.5vw;
 }
 
 .accountButton1:hover {
   box-shadow: 0px 0px 10px #808e68;
   background-color: #808e68;
-  font-size: 1em;
 }
+
 .accountButton2 {
   background-color: #b69394;
   border-radius: 0px;
@@ -127,13 +135,6 @@ header {
 .accountButton2:hover {
   box-shadow: 0px 0px 10px #946c6e;
   background-color: #946c6e;
-  font-size: 1em;
-}
-
-.cartIcon {
-  grid-column: 3/4;
-  justify-self: right;
-  padding-right: 0.5vw;
 }
 
 header a {
@@ -244,7 +245,6 @@ footer a{
   margin-bottom: 0px;
   text-align: center;
   font-size: 40px;
-  font-style: italic;
   color: #c1a390;
   margin: 0px;
   font-weight: bold;
@@ -256,7 +256,6 @@ footer a{
 }
 .menucustomItem h2,
 .menuItem h2 {
-  padding-top: 20vh;
   margin: 0px;
   text-align: center;
   padding-bottom: 3vh;
@@ -424,7 +423,6 @@ footer a{
 .processWord,
 .dashboardPage > h2 {
   font-size: 35px;
-  font-style: italic;
   color: #c1a390;
   text-align: center;
   font-weight: bold;
@@ -433,7 +431,6 @@ footer a{
 .processNote {
   text-align: center;
   margin: 1vh 0px 9vh;
-  font-style: italic;
 }
 
 .cartTable {
@@ -475,7 +472,6 @@ footer a{
   font-size: 20px;
   margin: 0px 0px 0px 10px;
   text-align: left;
-  color: #58624b;
 }
 
 .sumArea img {
@@ -550,7 +546,6 @@ footer a{
   text-align: center;
   font-size: 2.5em;
   padding-top: 10vh;
-  font-style: italic;
 }
 
 .cartForm {
@@ -577,11 +572,6 @@ footer a{
     margin: 2px;
     border-radius: 40%;
 } 
-
-
-
-
-
 
 /* dashboard */
 
@@ -662,7 +652,6 @@ footer a{
   font-size: 25px;
   text-align: center;
   margin-top: 15px;
-  font-style: italic;
   color: #c1a390;
 }
 
@@ -762,21 +751,17 @@ footer a{
 .instructionPage h1 {
   text-align: center;
   font-size: 40px;
-  font-style: italic;
-  color: #c1a390;
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
 
 .instructionPage section div {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   justify-content: flex-start;
-  height: 75vh;
+  height: 80vh;
   border: 7px double #dad7cd;
   background-color: #859174;
-  color: #f5ebe0;
 }
 
 .instructionPage section h2 {

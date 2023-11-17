@@ -3,7 +3,6 @@ content %}
 <main>
   <div class="menucustomPage">
     <section class="menucustomNavBar">
-      <h1 class="stepTitile">Let's Start !</h1>
       {% for category in categories %}
       <h3>
         <a href="#{{ category }}">| Choose your {{ category|capitalize }}</a>
@@ -12,8 +11,6 @@ content %}
     </section>
 
     <section class="menucustomItem">
-      <p>Enjoy your time!</p>
-      <p class="reminder">Checkout instruction page for more information.</p>
       {% for category in categories %}
       <h2 id="{{ category }}">{{ category|capitalize }}</h2>
       <ul class="itemType">
