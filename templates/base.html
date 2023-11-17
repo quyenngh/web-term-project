@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% block title %}Reatea{% endblock %}</title>
+    <title>{% block title %}REATEA{% endblock %}</title>
     <link
       href="{{ url_for('static', filename='css/stylesheet.css') }}"
       rel="stylesheet"
@@ -15,34 +15,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="topMainNavBar">
+
+        <div class="logoButton">
+          <a href="home" title="home" class="ourName">
+            <img
+              class="logo"
+              src="{{ url_for('static', filename='image/homePage/logo.jpg') }}"
+              alt="logo"
+            /> REATEA </a>
+        </div>
+
           <div class="navList">
             <a href="about" title="about"> ABOUT US </a>
             <a href="instructions"> INSTRUCTIONS </a>
             <a href="feedback"> FEEDBACK </a>
-          </div>
-
-          <div class="logoButton">
-            <a href="home" title="home">
-              <img
-                class="logo"
-                src="{{ url_for('static', filename='image/homePage/logo.png') }}"
-                alt="logo"
-                width="50"
-                height="50"
-            /></a>
-            <a class="ourName" href="home" title="home">  ReaTea </a>
-          </div>
-
-          <div class="navList">
             <a href="menu"> MENU </a></li>
             <a href="customize"> CUSTOMIZE </a>
-            
           </div>
+
 
           <div class="acctCartButton">
           

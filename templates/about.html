@@ -5,14 +5,23 @@
 {% block content %}
 <main class="aboutPage">
   <section>
-    <h1>Our Story</h1>
-    <p>&#9728  Each person is individually unique. Taste buds and preferences. 
-      After a long day, you all want to treat yourself to a refreshing drink. You will take control of your drink in your beverage customization process, 
-      allowing you to leave the store satisfied instead of empty-handed due to a lack of choices.</p>
-    
-    <p>&#9728  At ReaTea, you will no longer need to worry about not being able to choose a drink 
-      since you will make the decision of what ingredients you want in your beverage 
-      because you know what you need and like.</p>
+    <div class="tea">
+      <img
+        src="{{ url_for('static', filename='image/storyPage/tea.png') }}"
+        alt="tea leaves images"
+      />
+      <h1>About REATEA</h1>
+      <p class="origin">
+        Orginating from Canada, REATEA was founded in 2005 with a mission to make a high-quality,
+        freshly brewed teas accessible to discerning tea drinkers. Built on a sense of mindfulness with
+        every sip, REATEA is handcrafted by tea masters with over 20 years of exerpeince, incluing having
+        its own tea mountain and farms, professional tea tasters and tea roasters.
+      </p>
+      <p class="goal">
+        After a long day, you all want to treat yourself to a refreshing and relaxing drink. 
+        REATEA will customize your drink to your unique taste buds. 
+      </p>
+    </div>
   </section>
 </main>
 {% endblock %}

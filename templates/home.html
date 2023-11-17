@@ -1,52 +1,17 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
 %}
-<main class="homeContent">
-  <section>
-    <h1 class="homeSlogan">REATEA FOR YOU</h1>
-
-    <p class="contentWord">
-      "Indulge in a unique and refreshing bubble tea experience that's tailored
-      to your taste buds. Our team at ReaTea is dedicated to crafting the
-      perfect drink just for you.
-    </p>
-    <p class="contentWord">
-      With our customizable options, you'll always find your perfect blend.
-      Treat yourself today and discover the difference at ReaTea."
-    </p>
-    <p class="contentWord3">— The Codem Tea</p>
-  </section>
-
-  <section>
-    <div class="backpic">
+<main>
+  <div class="container">
+    <div class="tealeaf">
       <img
-        class="backpic1"
-        src="{{ url_for('static', filename='image/homePage/teabackground.jpg') }}"
-        alt="tea leaves images"
-        width="320"
-        height="225"
+      src="{{ url_for('static', filename='image/homePage/picktea.png') }}"
+      alt="picking tea leaves"
       />
-      <img
-        class="backpic2"
-        src="{{ url_for('static', filename='image/homePage/bubbleTeaIngredient.jpg') }}"
-        alt="bubble tea ingredient images"
-        width="320"
-        height="225"
-      />
-      <img
-        class="backpic3"
-        src="{{ url_for('static', filename='image/homePage/bubbleTeaOnHand.jpg') }}"
-        alt="bubble tea on hand images"
-        width="320"
-        height="225"
-      />
-      <img
-        class="backpic4"
-        src="{{ url_for('static', filename='image/homePage/twoBubbleTea.jpg') }}"
-        alt="two bubble tea images"
-        width="320"
-        height="225"
-      />
+      <h1 >Tea Starts From a Leaf</h1>
+      <p>
+        Our tea leaves are naturally grown in tea farms and are carefully picked by tea harvesters.
+      </p>
     </div>
-  </section>
+  </div>
 </main>
 {% endblock %}
