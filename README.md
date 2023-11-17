@@ -23,12 +23,8 @@ To run the application, please follow these steps:
 
 ## Group Members
 
-- Marco Poon
+- Minh-Anh Le
 
-- Chiao-Jhu(Katy) Chan
+- Hoang Quyen Nguyen
 
 - Carmen Su
-
-- Daniel Khavin
-
-- Armandeep Pannu
