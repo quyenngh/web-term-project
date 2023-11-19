@@ -4,9 +4,6 @@
 
 {% block content %}
 <main class="loginPage">
-
-
-
   <section class="loginSection">
       <h1>Welcome back ! </h1>
       {% if error %}
@@ -20,24 +17,5 @@
         <input class="loginsubmitButton" type="submit" value="Login" />
       </form>
   </section >
-
-  <section class="welsomeSection">
-    <p>. . . . . .</p>
-    <p>. . . . . .</p>
-    <p>. . . . . .</p>
-    <div>
-      <img
-            src="{{ url_for('static', filename='image/loginsignupPage/drinkSeries.png') }}"
-            alt="some drinks image"
-            width="240"
-            height="210"
-          />
-      <h2>Check it out !</h3>  
-    </div>
-    <p>. . . . . .</p>
-    <p>. . . . . .</p>
-    <p>. . . . . .</p>
-
-  </section>
 </main>
 {% endblock %}
