@@ -594,7 +594,7 @@ footer a{
 .loginPage {
   display: flex;
   justify-content: center;
-  margin-top: 5vh;
+  margin-top: 5%;
 }
 
 .signupSection,
