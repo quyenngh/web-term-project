@@ -11,7 +11,6 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 # Define the entry point for the container
-CMD ["flask", "run", "--host=0.0.0.0:80"]
+CMD ["flask", "run", "--host=127.0.0.1:5000"]
 
-EXPOSE 80/tcp
-EXPOSE 80/udp
+EXPOSE 5000
