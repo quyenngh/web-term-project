@@ -66,23 +66,26 @@ app = Flask(__name__)
 app.instance_path = str(Path(".").resolve())
 app.secret_key = "abcdefg"
 
-if __name__ == "__main__":
-    DB_NAME = "store"
-else:
-    DB_NAME = "test"
+# if __name__ == "__main__":
+#     DB_NAME = "store"
+# else:
+#     DB_NAME = "test"
+DB_NAME="freedb_reatea"
 
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}.db"
+# app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_NAME}.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = f"mysql://freedb_reatea:$5Qha6Bc9RzUH!t@sql.freedb.tech/freedb_reatea"
 
 login_manager = LoginManager(app)
 app.instance_path = str(Path(".").resolve())
 db.init_app(app)
 
 # Create database and populate with initial data if it doesn't exist
-if not os.path.isfile(f"{DB_NAME}.db") and DB_NAME == "store":
-    create_db("products.csv", "ingredients.csv")
+# if not os.path.isfile(f"{DB_NAME}.db") and DB_NAME == "store":
+# if not os.path.isfile(f"{DB_NAME}.db") and DB_NAME == "store":
+create_db("products.csv", "ingredients.csv")
 
-if DB_NAME == "test":
-    create_db("test_products.csv", "ingredients.csv")
+# if DB_NAME == "test":
+# create_db("test_products.csv", "ingredients.csv")
 
 app.secret_key = "abcdefg"
 

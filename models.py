@@ -31,8 +31,8 @@ class Product(db.Model):
 
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, nullable=False)
-    address = db.Column(db.String, nullable=False)
+    name = db.Column(db.String(80), nullable=False)
+    address = db.Column(db.String(80), nullable=False)
     completed = db.Column(db.Boolean, default=False)
     products = db.relationship("ProductsOrder", back_populates="order", cascade="all, delete-orphan")
 
@@ -86,13 +86,13 @@ class ProductsOrder(db.Model):
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String, nullable=False, unique=True)
-    password = db.Column(db.String, nullable=False)
+    username = db.Column(db.String(80), nullable=False, unique=True)
+    password = db.Column(db.String(80), nullable=False)
 
 
 class Feedback(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    message = db.Column(db.String, nullable=False)
+    message = db.Column(db.String(80), nullable=False)
 
 
 class Ingredient(db.Model):
