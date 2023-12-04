@@ -5,3 +5,4 @@ gunicorn==20.1.0
 pytest
 wheel
 flask_mysqldb
+pip==23.3.1
