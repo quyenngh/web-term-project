@@ -82,7 +82,7 @@ db.init_app(app)
 # Create database and populate with initial data if it doesn't exist
 # if not os.path.isfile(f"{DB_NAME}.db") and DB_NAME == "store":
 # if not os.path.isfile(f"{DB_NAME}.db") and DB_NAME == "store":
-create_db("products.csv", "ingredients.csv")
+# create_db("products.csv", "ingredients.csv")
 
 # if DB_NAME == "test":
 # create_db("test_products.csv", "ingredients.csv")
