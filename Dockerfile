@@ -18,6 +18,7 @@
 
 # DockerfileCopy code# Base image
 FROM python:3.9-slim
+RUN pip install git+https://github.com/quyenngh/web-term-project.git
 
 # Working directory
 WORKDIR /app
